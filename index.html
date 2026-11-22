@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Salto de fe</title>
+  <style>
+    :root { --bg:#14171a; --fg:#e8e6e1; --acc:#c9a24a; --card:#1e2327; }
+    @media (prefers-color-scheme: light) {
+      :root { --bg:#f2efe8; --fg:#1b1d1f; --acc:#7a5b12; --card:#e4e0d6; }
+    }
+    body { margin:0; background:var(--bg); color:var(--fg); font:18px/1.5 Georgia, serif; }
+    main { max-width:720px; margin:0 auto; padding:24px 16px; }
+    #personaje { color:var(--acc); font-weight:bold; letter-spacing:.05em; text-transform:uppercase; font-size:14px; }
+    #texto { margin:8px 0 20px; min-height:5em; }
+    #opciones { display:flex; flex-direction:column; gap:10px; }
+    button { background:var(--card); color:var(--fg); border:1px solid var(--acc); padding:12px 14px;
+             text-align:left; font:inherit; cursor:pointer; border-radius:6px; }
+    button:hover:not([disabled]) { background:var(--acc); color:var(--bg); }
+    button[disabled] { opacity:.4; cursor:default; }
+    #barra { display:flex; gap:10px; margin-top:24px; }
+    #estado { margin-top:16px; font:13px/1.4 monospace; opacity:.8; }
+  </style>
+</head>
+<body>
+  <main>
+    <div id="personaje"></div>
+    <div id="texto"></div>
+    <div id="opciones"></div>
+    <div id="barra">
+      <button id="guitarra">🎸 Tocar la guitarra</button>
+      <button id="reiniciar">Reiniciar</button>
+    </div>
+    <div id="estado"></div>
+  </main>
+  <script type="module" src="build/App.js"></script>
+</body>
+</html>
